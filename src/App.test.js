@@ -25,7 +25,7 @@ test('button clicks the background color and text change', () => {
   expect(colorButton).toHaveStyle({ backgroundColor: 'blue' })
 
   // expect the button text to be 'Change to red'
-  expect(colorButton.textContent).toBe('Change to red')
+  expect(colorButton).toHaveTextContent('Change to red')
 })
 
 test('checkbox initial conditions', () => {
@@ -68,7 +68,7 @@ test('disabled button has gray background and reverts to red', () => {
   expect(button).toHaveStyle({ backgroundColor: 'red' })
 })
 
-test('disabled button has gray background and reverts to red', () => {
+test('disabled button has gray background and reverts to blue', () => {
   render(<App />)
 
   const checkbox = screen.getByRole('checkbox', { name: 'Disable button' })
